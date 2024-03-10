@@ -7,7 +7,7 @@ import Media from "react-media";
 function App() {
   return (
     <div className="App">
-      <Media query="(max-width:800px)">
+      <Media query="(max-width:450px)">
         {(matches) => {
           return matches ? (
             <NoteList />

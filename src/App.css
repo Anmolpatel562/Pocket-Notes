@@ -20,6 +20,7 @@
     grid-template-rows: 10fr 1fr;
     text-align: center;
     align-items: center;
+    background-color: #DAE5F5;
 }
 
 .security{
