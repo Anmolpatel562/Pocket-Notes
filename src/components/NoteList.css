@@ -7,6 +7,7 @@
    justify-content: center;
    align-items: center;
    gap: 1.6rem;
+   cursor: pointer;
 }
 
 .noteList{
@@ -16,20 +17,4 @@
     flex-direction: column;
     justify-content: space-evenly;
     gap: .2rem;
-}
-
-.nameIcon{
-   display: flex;
-   align-items: center;
-   gap: 1.2rem;
-  justify-content: left;
-}
-
-.profileIcon{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    padding-left: .82rem;
-    padding-top: .95rem;
-    color: white;
 }

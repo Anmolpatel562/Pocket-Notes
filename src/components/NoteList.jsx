@@ -1,7 +1,8 @@
 import "./NoteList.css";
 import { useState } from "react";
+import ListComponent from "./ListComponent";
 
-function NoteList() {
+function NoteList({ selectedNote, setSelectedNote, setNoteSelected }) {
   const [list, setList] = useState([
     {
       name: "My Notes",
@@ -32,24 +33,20 @@ function NoteList() {
       color: "#FF66F0",
     },
   ]);
+
   return (
     <div>
       <div className="noteListContainer">
         <h1 className="appName">Pocket Notes</h1>
         <div className="noteList">
           {list.map((item) => {
-            let profileName = item.name.trim().split(" ");
             return (
-              <div className="nameIcon" key={item.name}>
-                <div
-                  className="profileIcon"
-                  style={{ backgroundColor: item.color }}
-                >
-                  {profileName[0].charAt(0).toUpperCase()}
-                  {profileName[1].charAt(0).toUpperCase()}
-                </div>
-                <span>{item.name}</span>
-              </div>
+              <ListComponent key={item.name}
+                selectedNote={selectedNote}
+                setSelectedNote={setSelectedNote}
+                item={item}
+                setNoteSelected={setNoteSelected}
+              />
             );
           })}
         </div>

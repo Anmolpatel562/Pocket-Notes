@@ -2,9 +2,9 @@ import React from 'react';
 import "./NoteNotSelected.css";
 import noteImg from"../image/note.png"
 
-export default function NoteNoteSelected() {
+export default function NoteNoteSelected({noteListClicked}) {
   return (
-    <div>
+    <div className={noteListClicked}>
       <div className='pageContainer'>
           <img className='noteImg' src={noteImg}></img>
           <h1 style={{fontWeight:500}} >Pocket Notes</h1>

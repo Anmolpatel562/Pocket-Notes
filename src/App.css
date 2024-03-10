@@ -10,14 +10,13 @@
 .App{
     width: 100vw;
     height: 100vh;
-    background-color: #DAE5F5;
     display: grid;
     grid-template-columns: 1fr 3fr;
 }
 
 .noteScreen{
     display: grid;
-    grid-template-rows: 10fr 1fr;
+    grid-template-rows: 10fr;
     text-align: center;
     align-items: center;
     background-color: #DAE5F5;
@@ -28,11 +27,12 @@
     justify-content: center;
     align-items: center;
     gap: 7px;
+    padding-bottom: 1rem;
 }
 .lockImg{
     width: 12px;
     margin-bottom: 2px;
 }
-@media screen and (max-width: 500px) {
-      
+.noteNotSelected{
+    display: none;
 }

@@ -1,3 +1,6 @@
+.noteNotSelected{
+    display: none;
+}
 .pageContainer{
     display: flex;
     flex-direction: column;
