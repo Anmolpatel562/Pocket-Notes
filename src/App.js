@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import NoteList from "./components/NoteList";
+import NoteNoteSelected  from './components/NoteNoteSelected';
+import Lock from './image/lock.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <NoteList/>
+     <div className='noteScreen'>
+       <NoteNoteSelected/>
+       <div className='security'>
+        <img className='lockImg' src={Lock}></img>
+        <p>end-to-end encrypted</p>
+        </div>
+     </div>
     </div>
   );
 }

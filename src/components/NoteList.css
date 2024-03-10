@@ -1,0 +1,17 @@
+.noteListContainer{
+   background-color: white;
+   width: 350px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 1.5rem;
+}
+
+.noteList{
+    background-color: bisque;
+    width: 75%;
+    height: 70%;
+}
+
