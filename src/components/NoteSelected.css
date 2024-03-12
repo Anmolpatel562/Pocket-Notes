@@ -2,6 +2,7 @@
     display: grid;
     grid-template-rows: .2fr 1.5fr .4fr;
     height: 100%;
+    
 }
 .noteHeader{
     background-color: #001F8B;
@@ -29,4 +30,16 @@
     height: 48px;
     border-radius: 100%;
     padding-top: .95rem;
+}
+.textarea{
+    height: 82%;
+    width: 95%;
+    margin-top: 1rem;
+    max-width: 95%;
+    max-height: 82%;
+    min-width: 95%;
+    min-height: 82%;
+    border-radius: 8px;
+    padding: .8rem;
+    font-size: 18px;
 }

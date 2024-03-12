@@ -31,11 +31,9 @@ function NoteList({ selectedNote, setSelectedNote, setNoteSelected }) {
     {
       name: "Python Notes",
       color: "#FF66F0",
-    },
+    }
   ]);
-
   return (
-    <div>
       <div className="noteListContainer">
         <h1 className="appName">Pocket Notes</h1>
         <div className="noteList">
@@ -50,7 +48,6 @@ function NoteList({ selectedNote, setSelectedNote, setNoteSelected }) {
             );
           })}
         </div>
-      </div>
     </div>
   );
 }
