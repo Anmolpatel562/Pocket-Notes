@@ -46,7 +46,7 @@ function App() {
 
   return (
     <div className="App">
-      <Media query="(max-width:450px)">
+      <Media query="(max-width:410px)">
         {(matches) => {
           return matches ? (
             <NoteList
