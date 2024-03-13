@@ -4,6 +4,7 @@ import "./Modal.css";
 const Modal = ({ listArray, setListArray, list, setList, setIsModalOpen }) => {
   const [value, setValue] = useState("");
   const [groupColor, setGroupColor] = useState("");
+  const [same,setSame] = useState(true);
 
   const inputHandler = (event) => {
     setValue(event.target.value);
@@ -19,13 +20,32 @@ const Modal = ({ listArray, setListArray, list, setList, setIsModalOpen }) => {
       name: value,
       color: groupColor,
     };
-    if(value.length > 0){
+    let check = true;
+    let len = groupColor.length;
+    listArray.map((item)=>{
+      if(value == item.name){
+        console.log("same")
+        check = false;
+      }
+    })
+    if(value.length > 0 && check && groupColor.length > 0){
       setListArray((prev) => [...prev, newGroupObj]);
       setList((prev) => [...prev, newGroupWithColorObj]);
       setIsModalOpen(false);
+    }else{
+      if(value.length <= 0 && !check && len <= 0){
+         alert("Error : You haven't choose Anything !!! Try Again.")
+      }else if(!check){
+        alert("Error : Group With this name Already Exists !!!")
+      }else if(len <= 0){
+        alert("Error : Please Select the color !!!")
+      }
+      else{
+        alert("Error : Please Enter the Group Name First !!!")
+      }
     }
   };
-  
+
   const colorObj = {
     one: "#B38BFA",
     two: "#FF79F2",
