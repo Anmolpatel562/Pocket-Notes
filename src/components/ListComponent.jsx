@@ -21,7 +21,7 @@ export default function ListComponent({
     >
       <div className="profileIcon" style={{ backgroundColor: item.color }}>
         {profileName[0].charAt(0).toUpperCase()}
-        {profileName[1].charAt(0).toUpperCase()}
+        {profileName[1]?profileName[1].charAt(0).toUpperCase():null}
       </div>
       <span>{item.name}</span>
     </div>

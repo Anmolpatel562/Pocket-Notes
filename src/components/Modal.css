@@ -1,0 +1,85 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(67, 66, 66, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 35%;
+  height: 240px;  
+  background-color: white;
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  padding-left: 2rem;
+  
+}
+.inputGroupName{
+    height: 25px;
+    width: 65%;
+    border-radius: 10px;
+    border: 2px solid #CCCCCC;
+    padding: 1rem;
+
+}
+.inputGroupName::placeholder{
+    color: #CCCCCC;
+    /* padding: 1rem; */
+}
+.group-name{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.chooseColor{
+    display: flex;
+    gap: 4%;
+    align-items: center;
+}
+.colorsGroup{
+    width: 70%;
+    display: flex;
+    gap: 4%;
+}
+.color{
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+.color1{
+    background-color: #B38BFA;
+}
+.color2{
+    background-color: #FF79F2;
+}
+.color3{
+    background-color: #43E6FC;
+}
+.color4{
+    background-color: #F19576;
+}
+.color5{
+    background-color: #0047FF;
+}
+.color6{
+    background-color: #6691FF;
+}
+.btnCreateGroup{
+    width: 100px;
+    align-self: flex-end;
+    background-color: #001F8B;
+    border: none;
+    height: 25px;
+    border-radius: 10px;
+    color: white;
+    margin-top: .5rem;
+}
