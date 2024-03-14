@@ -1,13 +1,12 @@
-import React from "react";
-import "./ListComponent.css";
+import React from 'react'
 
-export default function ListComponent({
+export default function PhoneListComponent({
   item,
   selectedNote,
   setSelectedNote,
   setNoteSelected,
 }) {
-  let profileName = item.name.trim().split(" ");
+    let profileName = item.name.trim().split(" ");
   return (
     <div
       className="nameIcon"
@@ -24,5 +23,5 @@ export default function ListComponent({
       </div>
       <span>{item.name}</span>
     </div>
-  );
+  )
 }

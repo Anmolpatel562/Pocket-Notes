@@ -10,10 +10,12 @@ function NoteList({
   setIsModalOpen,
   list,
   setList,
-}) {
+  mobileSelected,setMobileSelected
+}){
   const openModal = () => {
     setIsModalOpen(true);
   };
+
 
   return (
     <div className="noteListCreateBtn">

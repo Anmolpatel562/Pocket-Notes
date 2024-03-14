@@ -4,7 +4,6 @@ import "./Modal.css";
 const Modal = ({ listArray, setListArray, list, setList, setIsModalOpen }) => {
   const [value, setValue] = useState("");
   const [groupColor, setGroupColor] = useState("");
-  const [same,setSame] = useState(true);
 
   const inputHandler = (event) => {
     setValue(event.target.value);

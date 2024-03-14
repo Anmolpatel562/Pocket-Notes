@@ -9,7 +9,7 @@ export default function NoteSelected({
   listArray,
   setListArray,
   data,
-}) {
+}){
   let profileName = selectedNote.name.trim().split(" ");
   const [value, setValue] = useState("");
   const textHandler = (e) => {

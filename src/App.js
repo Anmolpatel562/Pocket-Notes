@@ -6,6 +6,9 @@ import Media from "react-media";
 import { useState, useEffect } from "react";
 import NoteSelected from "./components/NoteSelected";
 import Modal from "./components/Modal";
+import NoteListPhone from './components/NoteListPhone';
+import NoteNoteSelectedPhone from './components/NoteNoteSelectedPhone';
+import NoteSelectedPhone from './components/NoteSelectedPhone';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -13,6 +16,9 @@ function App() {
   const [newGroupCreated, setNewGroupCreated] = useState(null);
   let noteListClicked = noteSelected ? " noteNotSelected" : null;
   let [selectedNote, setSelectedNote] = useState(null);
+  const [hideStyle,setHideStyle] = useState("");
+
+  const [mobileSelected,setMobileSelected] = useState(false);
 
   const [list, setList] = useState([
     {
@@ -55,8 +61,8 @@ function App() {
   };
 
   const handleOutsideClick = (event) => {
-    if (event.target.className == "modal-overlay") {
-      setIsModalOpen(false);
+    if(event.target.className == "modal-overlay") {
+       setIsModalOpen(false);
     }
   };
 
@@ -91,15 +97,52 @@ function App() {
     },
   ]);
 
+  const [styling,setStyling] = useState("1fr 3fr");
+  const changeHandler = ()=>{
+     setStyling("1fr");
+  }
+
   return (
-    <div className="App" onClick={handleOutsideClick}>
+    <div className="App" onClick={handleOutsideClick} style={{gridTemplateColumns:styling}} onChange={changeHandler}>
       <Media query="(max-width:410px)">
         {(matches) => {
+
+          if(matches){
+             changeHandler(); 
+          }
+
           return matches ? (
-            <NoteList
-              noteSelected={noteSelected}
-              setNoteSelected={setNoteSelected}
-            />
+            <>
+              <NoteListPhone
+                 noteSelected={noteSelected}
+                 setNoteSelected={setNoteSelected}
+                 selectedNote={selectedNote}
+                 setSelectedNote={setSelectedNote}
+                 isModalOpen={isModalOpen}
+                 setIsModalOpen={setIsModalOpen}
+                 list={list}
+                 setList={setList}
+                 mobileSelected={mobileSelected}
+                 setMobileSelected={setMobileSelected}
+                 hideStyle={hideStyle} 
+                 setHideStyle={setHideStyle}
+              />
+              <div className="noteScreen" >
+                <NoteNoteSelectedPhone noteListClicked={noteListClicked}/>
+                {noteListClicked ? (
+                  <NoteSelectedPhone
+                    selectedNote={selectedNote}
+                    listArray={listArray}
+                    setListArray={setListArray}
+                    data={data}
+                    hideStyle={hideStyle} 
+                    setHideStyle={setHideStyle}
+                  />
+                ) : (
+                  <></>
+                )}
+              </div>
+            </>
           ) : (
             <>
               <NoteList
