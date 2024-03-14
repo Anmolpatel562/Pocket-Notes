@@ -3,6 +3,7 @@ import TextNotePanel from './TextNotePanel';
 import sendOn from "../image/sendOn.png";
 import sendOff from "../image/sendOff.png";
 import './NoteSelectedPhone.css';
+import arrow from '../image/arrow.png'
 
 export default function NoteSelectedPhone({
   selectedNote,
@@ -64,13 +65,18 @@ export default function NoteSelectedPhone({
     var displayNotePanel = "none";
 
     if(hideStyle == "none"){
-       displayNotePanel = ""
+       displayNotePanel = "";
+    }
+
+    const backBtnHandler = ()=>{
+      setHideStyle("")
     }
   
     return (
       <div className="notePanelPhone" style={{display:displayNotePanel}}>
         <div className="noteHeaderPhone">
           <div className="profilePhone">
+            <img src={arrow} onClick={backBtnHandler}></img>
             <div className="iconPhone" style={{ backgroundColor: selectedNote.color }}>
               {profileName[0].charAt(0).toUpperCase()}
               {profileName[1] ? profileName[1].charAt(0).toUpperCase() : null}

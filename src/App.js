@@ -104,13 +104,11 @@ function App() {
 
   return (
     <div className="App" onClick={handleOutsideClick} style={{gridTemplateColumns:styling}} onChange={changeHandler}>
-      <Media query="(max-width:410px)">
+      <Media query="(max-width:430px)">
         {(matches) => {
-
           if(matches){
              changeHandler(); 
           }
-
           return matches ? (
             <>
               <NoteListPhone
@@ -128,7 +126,6 @@ function App() {
                  setHideStyle={setHideStyle}
               />
               <div className="noteScreen" >
-                <NoteNoteSelectedPhone noteListClicked={noteListClicked}/>
                 {noteListClicked ? (
                   <NoteSelectedPhone
                     selectedNote={selectedNote}

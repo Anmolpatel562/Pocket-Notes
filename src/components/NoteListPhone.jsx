@@ -20,7 +20,6 @@ export default function NoteListPhone({
         setIsModalOpen(true);
     };
     const hideHandler = ()=>{
-       console.log("Clicked")
        setHideStyle("none");
     }
     return (
