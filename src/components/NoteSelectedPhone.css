@@ -27,7 +27,7 @@
 }
 
 .textareaPhone{
-    height: 82%;
+    height: 80%;
     width: 95%;
     margin-top: 1rem;
     max-width: 95%;
@@ -40,7 +40,7 @@
 }
 
 .noteMainPhone{
-    height: 82vh;
+    height: 80vh;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: black; 
