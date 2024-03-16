@@ -102,8 +102,10 @@ function App() {
      setStyling("1fr");
   }
 
+  // onChange={changeHandler}
+
   return (
-    <div className="App" onClick={handleOutsideClick} style={{gridTemplateColumns:styling}} onChange={changeHandler}>
+    <div className="App" onClick={handleOutsideClick} style={{gridTemplateColumns:styling}} >
       <Media query="(max-width:430px)">
         {(matches) => {
           if(matches){
